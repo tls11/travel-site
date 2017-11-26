@@ -15,3 +15,11 @@
 		@mixin-content;
 	}
 }
+
+@define-mixin clearFix {
+	&::after {  /*will add empty string after all of the content in row div*/
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
