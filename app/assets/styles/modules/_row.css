@@ -7,12 +7,22 @@
 		margin-right: -65px;
 	}
 
-	&--gutters>div {
-		/*selects all direct children with a tag of div*/
+	&--gutters > div {
+		/*selects all direct children with a tag of div
+		ie immediate child elements*/
 		padding-right: 65px;
 	}
 
+	&__b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
 	@mixin atMedium {
+
+		&__b-margin-until-medium {
+			margin-bottom: 0;
+		}
+
 		&__medium-4 {
 			float: left;
 			width: 33.33%;
