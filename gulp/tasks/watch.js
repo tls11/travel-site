@@ -1,10 +1,10 @@
 const gulp = require('gulp')
 const watch = require('gulp-watch')
-const browerSync = require('browser-sync').create()
+const browserSync = require('browser-sync').create()
 
 
 gulp.task('watch', () => {
-  browerSync.init({
+  browserSync.init({
     notify: false,
     server: {
       baseDir: "app"
@@ -12,7 +12,7 @@ gulp.task('watch', () => {
   })
 
   watch('./app/index.html', () => { // file on computer to watch
-    browerSync.reload() // what we want it to do when a change is detected
+    browserSync.reload() // what we want it to do when a change is detected
   })
 
   watch('./app/assets/styles/**/*.css', () => {
@@ -22,5 +22,5 @@ gulp.task('watch', () => {
 
 gulp.task('cssInject', ['styles'], () => {
   return gulp.src('./app/temp/styles/styles.css')
-    .pipe(browerSync.stream())
+    .pipe(browserSync.stream())
 })
