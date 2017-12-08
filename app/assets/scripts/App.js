@@ -1,5 +1,10 @@
 const Person = require('./modules/Person')
 
-const person = (name, favColor) => {
-  console.log('Hello my name is ' + name + " and my favorite color is " + favColor)
-}
+console.log('hi josh')
+
+
+// let john = new Person('John Doe', 'blue')
+// john.greet()
+
+// let jane = new Person('Jane Smith', 'green')
+// jane.greet()

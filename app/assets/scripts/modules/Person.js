@@ -6,4 +6,7 @@ const Person = (fullName, favColor) => {
   }
 }
 
-module.exports = Person
+exports.exampleProperty = "Super magical example value"
+exports.exampleFunction = function() {
+  alert("this is an example")
+}
