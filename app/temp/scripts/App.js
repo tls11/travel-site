@@ -65,38 +65,8 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-const Person = __webpack_require__(1)
-
-console.log('hi josh')
-
-
-// let john = new Person('John Doe', 'blue')
-// john.greet()
-
-// let jane = new Person('Jane Smith', 'green')
-// jane.greet()
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-const Person = (fullName, favColor) => {
-  this.name = fullName
-  this.favoriteColor = favColor
-  this.greet = () => {
-    console.log('Hello, my name is ' + this.name + " and my favorite color is " + this.favoriteColor + '.')
-  }
-}
-
-console.log(Person)
-
-exports.exampleProperty = "Super magical example value"
-exports.exampleFunction = function() {
-  alert("this is an example")
-}
 
 
 /***/ })
