@@ -1,17 +1,18 @@
-const gulp = require('gulp')
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-const cssvars = require('postcss-simple-vars')
-const nested = require('postcss-nested')
-const cssImport = require('postcss-import')
-const mixins = require('postcss-mixins')
+var gulp = require('gulp'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested'),
+cssImport = require('postcss-import'),
+mixins = require('postcss-mixins'),
+hexrgba = require('postcss-hexrgba');
 
-gulp.task('styles', () => {
+gulp.task('styles', function() {
   return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer])) // postcss expects an array
+    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
     .on('error', function(errorInfo) {
-      console.log(errorInfo.toString())
-      this.emit('end')
+      console.log(errorInfo.toString());
+      this.emit('end');
     })
-    .pipe(gulp.dest('./app/temp/styles'))
-})
+    .pipe(gulp.dest('./app/temp/styles'));
+});
