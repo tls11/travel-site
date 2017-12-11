@@ -1,26 +1,53 @@
 .primary-nav {
+  padding-top: 10px;
 
-	&--pull-right {
-		float: right;
-	}
+  @mixin atMedium {
+    padding-top: 0;
+  }
 
-	ul {
-		margin: 0;
-		padding: 0;
-		@mixin clearfix;
-	}
+  &--pull-right {
+    @mixin atMedium{
+      float: right;
+    }
+  }
 
-	li {
-		list-style: none;
-		float: left;
-		padding-right: 20px;
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+    @mixin clearfix;
+  }
 
-	a {
-		color: #FFF;
-		text-decoration: none;
-		font-weight: 300;
-		display: block;
-		padding: 12px 0;
-	}
+  li {
+    list-style: none;
+    padding-right: 7px;
+    display: inline-block;
+    @mixin atMedium {
+      padding-right: 20px;
+      float:left;
+      display:block;
+    }
+  }
+
+  li:last-child {
+    padding-right: 0;
+    @mixin atMedium {
+      padding-right: 20px;
+    }
+  }
+
+  a {
+    color: #FFF;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    padding: 5px 8px;
+    font-size: .8rem;
+    background-color: rgba($mainBlue, .5);
+
+    @mixin atMedium {
+      padding: 12px 0;
+      font-size: 1rem;
+      background-color: transparent;
+    }
+  }
 }
