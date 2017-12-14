@@ -598,7 +598,6 @@ a {
 
 .page-section {
   padding: 1.2rem 0;
-
 }
 
 @media (min-width: 800px) {
@@ -641,7 +640,7 @@ a {
 
 @media (min-width: 1010px) {
 
-  .page-section--testimonials {
+  .page-section--testimonials.lazyloaded {
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
     background-size: cover;
   }
