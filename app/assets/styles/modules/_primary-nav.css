@@ -6,7 +6,7 @@
   }
 
   &--pull-right {
-    @mixin atMedium{
+    @mixin atMedium {
       float: right;
     }
   }
@@ -19,12 +19,12 @@
 
   li {
     list-style: none;
-    padding-right: 7px;
     display: inline-block;
+    padding-right: 7px;
     @mixin atMedium {
       padding-right: 20px;
-      float:left;
-      display:block;
+      float: left;
+      display: block;
     }
   }
 
@@ -45,8 +45,8 @@
     background-color: rgba($mainBlue, .5);
 
     @mixin atMedium {
-      padding: 12px 0;
       font-size: 1rem;
+      padding: 12px 0;
       background-color: transparent;
 
       &.is-current-link {

@@ -29,8 +29,8 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%) scale(.8);
-    transform-origin: 50% 0;
     transition: transform .3s ease-out;
+    transform-origin: 50% 0;
     background-color: $mainBlue;
     padding: 25px 36px;
 
@@ -39,7 +39,7 @@
       transform: translateX(0);
 
       .site-header--dark & {
-        transform: scale(.57);
+        transform: scale(.56);
       }
     }
   }
@@ -68,7 +68,7 @@
       transition: transform .3s ease-out;
     }
 
-     &__middle {
+    &__middle {
       position: absolute;
       top: 8px;
       left: 0;
@@ -79,7 +79,7 @@
       transform-origin: 0 50%;
     }
 
-     &::after {
+    &::after {
       content: "";
       position: absolute;
       bottom: 0;
