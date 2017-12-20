@@ -1,11 +1,11 @@
-var gulp = require('gulp'),
-imagemin = require('gulp-imagemin'),
-del = require('del'),
-usemin = require('gulp-usemin'),
-rev = require('gulp-rev'),
-cssnano = require('gulp-cssnano'),
-uglify = require('gulp-uglify'),
-browserSync = require('browser-sync').create();
+const gulp = require('gulp')
+const imagemin = require('gulp-imagemin')
+const del = require('del')
+const usemin = require('gulp-usemin')
+const rev = require('gulp-rev')
+const cssnano = require('gulp-cssnano')
+const uglify = require('gulp-uglify')
+const browserSync = require('browser-sync').create()
 
 gulp.task('previewDist', function() {
   browserSync.init({
@@ -13,12 +13,12 @@ gulp.task('previewDist', function() {
     server: {
       baseDir: "docs"
     }
-  });
-});
+  })
+})
 
 gulp.task('deleteDistFolder', ['icons'], function() {
-  return del("./docs");
-});
+  return del("./docs")
+})
 
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
   var pathsToCopy = [
@@ -32,8 +32,8 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
   ]
 
   return gulp.src(pathsToCopy)
-    .pipe(gulp.dest("./docs"));
-});
+    .pipe(gulp.dest("./docs"))
+})
 
 gulp.task('optimizeImages', ['deleteDistFolder'], function() {
   return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
@@ -42,12 +42,12 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function() {
       interlaced: true,
       multipass: true
     }))
-    .pipe(gulp.dest("./docs/assets/images"));
-});
+    .pipe(gulp.dest("./docs/assets/images"))
+})
 
 gulp.task('useminTrigger', ['deleteDistFolder'], function() {
-  gulp.start("usemin");
-});
+  gulp.start("usemin")
+})
 
 gulp.task('usemin', ['styles', 'scripts'], function() {
   return gulp.src("./app/index.html")
@@ -55,7 +55,7 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
       css: [function() {return rev()}, function() {return cssnano()}],
       js: [function() {return rev()}, function() {return uglify()}]
     }))
-    .pipe(gulp.dest("./docs"));
-});
+    .pipe(gulp.dest("./docs"))
+})
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger'])
