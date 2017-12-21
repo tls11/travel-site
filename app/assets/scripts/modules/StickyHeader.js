@@ -26,7 +26,7 @@ class StickyHeader {
   }
 
   createHeaderWaypoint() {
-    let that = this
+    const that = this
     new Waypoint({
       element: this.headerTriggerElement[0],
       handler: function(direction) {
@@ -40,7 +40,7 @@ class StickyHeader {
   }
 
   createPageSectionWaypoints() {
-    let that = this
+    const that = this
     this.pageSections.each(function() {
       let currentPageSection = this
       new Waypoint({

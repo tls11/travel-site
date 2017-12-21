@@ -21,7 +21,7 @@ gulp.task('deleteDistFolder', ['icons'], function() {
 })
 
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
-  var pathsToCopy = [
+  const pathsToCopy = [
     './app/**/*',
     '!./app/index.html',
     '!./app/assets/images/**',
