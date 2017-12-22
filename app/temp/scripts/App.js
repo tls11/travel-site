@@ -11271,10 +11271,11 @@ var StickyHeader = function () {
     this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
     this.createHeaderWaypoint();
     this.pageSections = (0, _jquery2.default)(".page-section");
-    this.headerLinks = (0, _jquery2.default)(".primary-nav a");
+    this.headerLinks = (0, _jquery2.default)(".primary-nav a, .smooth-scroll");
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
     this.refreshWaypoints();
+    console.log(this.headerLinks);
   }
 
   _createClass(StickyHeader, [{
