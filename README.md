@@ -5,14 +5,14 @@ Site built following Brad Schiff's excellent [Git a Web Developer Job: Mastering
 
 Building this site taught me a lot about:
 
-Mobile First Development
-Responsive Design
-BEM (Block Element Modifier) Methodology
-OOP
-Gulp
-PostCSS
-Babel
-Webpack
-Lazy Loading
-Minification
-Uglification
+* Mobile First Development
+* Responsive Design
+* BEM (Block Element Modifier) Methodology
+* OOP
+* Gulp
+* PostCSS
+* Babel
+* Webpack
+* Lazy Loading
+* Minification
+* Uglification
